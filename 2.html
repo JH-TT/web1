@@ -3,47 +3,17 @@
 <head>
     <title>WEB1 - CSS</title> <!-- 웹페이지 제목을 설정 -->
     <meta charset="utf-8"> <!-- 기본적으로 vscode에 설정돼 있어서 여기선 없어도 됨 -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6JLDMSLT1R"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6JLDMSLT1R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-6JLDMSLT1R');
-</script>
-<!-- head에서 style을 하면 관련된 태그는 전부 style처리해버린다. -->
-<style>
-    body{
-        margin: 0;
-    }
-    a {
-        color: black;
-        text-decoration: none;
-    }
-    h1 {
-        font-size: 45px;
-        text-align: center;
-        border-bottom: 1px solid gray;
-        margin: 0;
-        padding: 20px;
-    }
-    #grid ol{ /* 모든 ol태그중에 아이디가 grid인 곳 */
-        border-right: 1px solid gray;
-        width: 100px;
-        margin: 0;
-        padding: 20px;
-        padding-left: 33px;        
-    }
-    #grid{
-        display: grid;
-        grid-template-columns: 150px 1fr;
-    }
-    #article{ /* grid안에 있으니 #grid #article로 해도 무방. */
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-</style>
+    gtag('config', 'G-6JLDMSLT1R');
+    </script>
+    <!-- head에서 style을 하면 관련된 태그는 전부 style처리해버린다. -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <!-- 여기 기준으로 아래는 본문(body로 묶음), 위에는 본문(head로 묶음)을 설명. -->
 <!-- alt를 누른상태로 다른 곳을 누르면 멀티커서 생김 -->
