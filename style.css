@@ -2,7 +2,7 @@ body{
     margin: 0;
 }
 a {
-    color: black;
+    color: blue;
     text-decoration: none; /* 밑줄 제거 */
 }
 h1 {
