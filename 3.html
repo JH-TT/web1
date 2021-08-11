@@ -17,7 +17,40 @@
 <!-- 여기 기준으로 아래는 본문(body로 묶음), 위에는 본문(head로 묶음)을 설명. -->
 <!-- alt를 누른상태로 다른 곳을 누르면 멀티커서 생김 -->
 <body>
-    <h1><a href="index.html">WEB</a></h1>    
+    <!-- this는 자기자신을 가리킨다. -->
+    <!-- ctrl + D를 하면 선택된 단어를 하나씩 추가. -->
+    <!-- ctrl + shift + L 은 같은단어 전부 블록 -->
+    <!-- target이라는 변수를 추가해서 중복을 제거하고, 더 코드를 간결하게 만들었다. -->
+    <input id="night_day" type="button" value="night" onclick="
+        var target = document.querySelector('body')
+        if(this.value === 'night'){
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            this.value = 'day';
+
+
+            var element = document.querySelectorAll('a');
+            var i = 0;
+            while(i < element.length){
+                element[i].style.color = 'powderblue';
+                i = i + 1
+            }
+        } else{
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            this.value = 'night';     
+
+            var element = document.querySelectorAll('a');
+            var i = 0;
+            while(i < element.length){
+                element[i].style.color = 'blue';
+                i = i + 1
+            }
+        }
+
+        
+    ">
+    <h1><a href="index.html">WEB</a></h1>  
     <div id="grid">        
         <ol> <!-- ol(ordered list)은 숫자가 자동으로 넘버링 되게 해준다. -->
             <li><a href="1.html">HTML</a></li>
@@ -29,14 +62,32 @@
         <h2>JavaScript</h2>
         <p>모질라 재단의 프로토타입기반의 프로그래밍 언어로, 스크립트 언어에 해당된다. 특수한 목적이 아닌 이상 모든 웹 브라우저에 인터프리터가 내장되어 있다. 오늘날 HTML, CSS와 함께 웹을 구성하는 요소 중 하나다. HTML이 웹 페이지의 기본 구조를 담당하고, CSS가 디자인을 담당한다면 JavaScript는 클라이언트 단에서 웹 페이지가 동작하는 것을 담당한다.[1] 웹 페이지를 자동차에 비유하자면, HTML은 자동차의 뼈대, CSS는 자동차의 외관, JavaScript는 자동차의 동력이라고 볼 수 있다</p>
         </div>
-    </div>
-    <input type="button" value="night" onclick="
-     document.querySelector('body').style.backgroundColor = 'black';
-     document.querySelector('body').style.color = 'white';
+    </div>    
+    <input id="night_day" type="button" value="night" onclick="
+        if(this.value === 'night'){
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            this.value = 'day';
+
+            var element = document.querySelectorAll('a');
+            var i = 0;
+            while(i < element.length){
+                element[i].style.color = 'powderblue';
+                i = i + 1
+            }
+        } else{
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+            this.value = 'night';   
+
+            var element = document.querySelectorAll('a');
+            var i = 0;
+            while(i < element.length){
+                element[i].style.color = 'blue';
+                i = i + 1
+            }
+        }
     ">
-    <input type="button" value="day" onclick="
-    document.querySelector('body').style.backgroundColor = 'white';
-    document.querySelector('body').style.color = 'black';">
     <p> <!-- 댓글 기능 추가! -->
         <div id="disqus_thread"></div>
         <script>
