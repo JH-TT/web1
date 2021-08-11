@@ -26,9 +26,14 @@
         if(this.value === 'night'){
             target.style.backgroundColor = 'black';
             target.style.color = 'white';
-            this.value = 'day';
 
-
+            var a = document.querySelectorAll('#night_day');
+            var i = 0;
+            while(i < a.length){
+                a[i].value = 'day';
+                i = i + 1
+            }
+            
             var element = document.querySelectorAll('a');
             var i = 0;
             while(i < element.length){
@@ -38,7 +43,13 @@
         } else{
             target.style.backgroundColor = 'white';
             target.style.color = 'black';
-            this.value = 'night';     
+            
+            var a = document.querySelectorAll('#night_day');
+            var i = 0;
+            while(i < a.length){
+                a[i].value = 'night';
+                i = i + 1
+            }
 
             var element = document.querySelectorAll('a');
             var i = 0;
@@ -67,7 +78,13 @@
         if(this.value === 'night'){
             document.querySelector('body').style.backgroundColor = 'black';
             document.querySelector('body').style.color = 'white';
-            this.value = 'day';
+            
+            var a = document.querySelectorAll('#night_day');
+            var i = 0;
+            while(i < a.length){
+                a[i].value = 'day';
+                i = i + 1
+            }
 
             var element = document.querySelectorAll('a');
             var i = 0;
@@ -78,7 +95,13 @@
         } else{
             document.querySelector('body').style.backgroundColor = 'white';
             document.querySelector('body').style.color = 'black';
-            this.value = 'night';   
+            
+            var a = document.querySelectorAll('#night_day');
+            var i = 0;
+            while(i < a.length){
+                a[i].value = 'night';
+                i = i + 1
+            }
 
             var element = document.querySelectorAll('a');
             var i = 0;
