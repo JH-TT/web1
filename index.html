@@ -3,6 +3,15 @@
 <head>
     <title>WEB1 - Welcome</title> <!-- 웹페이지 제목을 설정 -->
     <meta charset="utf-8"> <!-- 기본적으로 vscode에 설정돼 있어서 여기선 없어도 됨 -->
+
+    <!-- 제이쿼리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 제이쿼리 -->
+    
+    <!-- 주, 야간 버튼 코드 시작 -->
+    <script src="Colors.js"></script>
+    <!-- 주, 야간 버튼 코드 끝 -->
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6JLDMSLT1R"></script>
     <script>
@@ -17,6 +26,9 @@
 <!-- 여기 기준으로 아래는 본문(body로 묶음), 위에는 본문(head로 묶음)을 설명. -->
 <!-- alt를 누른상태로 다른 곳을 누르면 멀티커서 생김 -->
 <body>
+    <input id="night_day" type="button" value="night" onclick="
+        nightDayHandler(this);
+    ">
     <h1><a href="index.html">WEB</a></h1>
     <div id="grid">
         <ol> <!-- ol(ordered list)은 숫자가 자동으로 넘버링 되게 해준다. -->
@@ -30,6 +42,9 @@
             <p>The World Wide Web (WWW), commonly known as the Web, is an information system where documents and other web resources are identified by Uniform Resource Locators (URLs, such as https://example.com/), which may be interlinked by hyperlinks, and are accessible over the Internet.[1][2] The resources of the Web are transferred via the Hypertext Transfer Protocol (HTTP), may be accessed by users by a software application called a web browser, and are published by a software application called a web server. The World Wide Web is not synonymous with the Internet, which pre-dated the Web in some form by over two decades and upon which technologies the Web is built.</p>
         </div>
     </div>
+    <input id="night_day" type="button" value="night" onclick="
+        nightDayHandler(this);
+    ">
     <p> <!-- 댓글 기능 추가! -->
         <div id="disqus_thread"></div>
         <script>

@@ -3,8 +3,17 @@
 <head>
     <title>WEB1 - JavaScript</title> <!-- 웹페이지 제목을 설정 -->
     <meta charset="utf-8"> <!-- 기본적으로 vscode에 설정돼 있어서 여기선 없어도 됨 -->
+    
+    <!-- 제이쿼리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 제이쿼리 -->
+
+    <!-- 주, 야간 버튼 코드 시작 -->
+    <script src="Colors.js"></script>
+    <!-- 주, 야간 버튼 코드 끝 -->
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6JLDMSLT1R"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6JLDMSLT1R"></script>    
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -22,44 +31,7 @@
     <!-- ctrl + shift + L 은 같은단어 전부 블록 -->
     <!-- target이라는 변수를 추가해서 중복을 제거하고, 더 코드를 간결하게 만들었다. -->
     <input id="night_day" type="button" value="night" onclick="
-        var target = document.querySelector('body')
-        if(this.value === 'night'){
-            target.style.backgroundColor = 'black';
-            target.style.color = 'white';
-
-            var a = document.querySelectorAll('#night_day');
-            var i = 0;
-            while(i < a.length){
-                a[i].value = 'day';
-                i = i + 1
-            }
-            
-            var element = document.querySelectorAll('a');
-            var i = 0;
-            while(i < element.length){
-                element[i].style.color = 'powderblue';
-                i = i + 1
-            }
-        } else{
-            target.style.backgroundColor = 'white';
-            target.style.color = 'black';
-            
-            var a = document.querySelectorAll('#night_day');
-            var i = 0;
-            while(i < a.length){
-                a[i].value = 'night';
-                i = i + 1
-            }
-
-            var element = document.querySelectorAll('a');
-            var i = 0;
-            while(i < element.length){
-                element[i].style.color = 'blue';
-                i = i + 1
-            }
-        }
-
-        
+        nightDayHandler(this);
     ">
     <h1><a href="index.html">WEB</a></h1>  
     <div id="grid">        
@@ -75,41 +47,7 @@
         </div>
     </div>    
     <input id="night_day" type="button" value="night" onclick="
-        if(this.value === 'night'){
-            document.querySelector('body').style.backgroundColor = 'black';
-            document.querySelector('body').style.color = 'white';
-            
-            var a = document.querySelectorAll('#night_day');
-            var i = 0;
-            while(i < a.length){
-                a[i].value = 'day';
-                i = i + 1
-            }
-
-            var element = document.querySelectorAll('a');
-            var i = 0;
-            while(i < element.length){
-                element[i].style.color = 'powderblue';
-                i = i + 1
-            }
-        } else{
-            document.querySelector('body').style.backgroundColor = 'white';
-            document.querySelector('body').style.color = 'black';
-            
-            var a = document.querySelectorAll('#night_day');
-            var i = 0;
-            while(i < a.length){
-                a[i].value = 'night';
-                i = i + 1
-            }
-
-            var element = document.querySelectorAll('a');
-            var i = 0;
-            while(i < element.length){
-                element[i].style.color = 'blue';
-                i = i + 1
-            }
-        }
+        nightDayHandler(this);
     ">
     <p> <!-- 댓글 기능 추가! -->
         <div id="disqus_thread"></div>

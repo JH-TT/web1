@@ -3,6 +3,15 @@
 <head>
     <title>WEB1 - HTML</title> <!-- 웹페이지 제목을 설정 -->
     <meta charset="utf-8"> <!-- 기본적으로 vscode에 설정돼 있어서 여기선 없어도 됨 -->
+
+    <!-- 제이쿼리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 제이쿼리 -->
+
+    <!-- 주, 야간 버튼 코드 시작 -->
+    <script src="Colors.js"></script>
+    <!-- 주, 야간 버튼 코드 끝 -->
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6JLDMSLT1R"></script>
     <script>
@@ -18,6 +27,9 @@
 <!-- 여기 기준으로 아래는 본문(body로 묶음), 위에는 본문(head로 묶음)을 설명. -->
 <!-- alt를 누른상태로 다른 곳을 누르면 멀티커서 생김 -->
 <body>
+    <input id="night_day" type="button" value="night" onclick="
+        nightDayHandler(this);
+    ">
     <h1><a href="index.html">WEB</a></h1>    
     <!-- ul(unordered list)은  li의 부모태그! 경계를 짓기 위한, 그룹핑을 하기 위한 부모태그 -->
     <!-- li는 목차생성할 때 주로 사용한다. -->
@@ -45,6 +57,9 @@
             </p><p sytle="margin-top:45px"><!-- 위로부터 45픽셀 떨어져 있음을 의미함 -->HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects, such as interactive forms, may be embedded into the rendered page. It provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets.</p>
         </div>
     </div>
+    <input id="night_day" type="button" value="night" onclick="
+        nightDayHandler(this);
+    ">
     <p> <!-- 댓글 기능 추가! -->
         <div id="disqus_thread"></div>
         <script>
